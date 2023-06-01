@@ -48,7 +48,7 @@ python app.py
 Отправьте POST запрос на `/upload`, указав файл в поле `file`:
 
 ```bash
-curl -X POST -F "file=@/path/to/your/file.csv" http://localhost:5000/upload
+http://localhost:5000/upload
 ```
 
 ### Получение списка файлов
@@ -56,7 +56,7 @@ curl -X POST -F "file=@/path/to/your/file.csv" http://localhost:5000/upload
 Отправьте GET запрос на `/files`:
 
 ```bash
-curl http://localhost:5000/files
+http://localhost:5000/files
 ```
 
 ### Получение данных из файла
@@ -64,7 +64,7 @@ curl http://localhost:5000/files
 Отправьте GET запрос на `/data` с параметром `filename`, указывающим имя файла:
 
 ```bash
-curl http://localhost:5000/data?filename=your_file.csv
+http://localhost:5000/data?filename=your_file.csv
 ```
 
 ### Удаление файла
@@ -72,7 +72,7 @@ curl http://localhost:5000/data?filename=your_file.csv
 Отправьте DELETE запрос на `/delete/<filename>`, указав имя файла:
 
 ```bash
-curl -X DELETE http://localhost:5000/delete/your_file.csv
+http://localhost:5000/delete/your_file.csv
 ```
 
 ## Тестирование
@@ -82,10 +82,3 @@ curl -X DELETE http://localhost:5000/delete/your_file.csv
 ```bash
 python -m unittest tests.py
 ```
-
-## Лицензия
-
-Этот проект лицензирован по лицензии MIT. Подробности смотрите в файле [LICENSE](LICENSE).
-```
-
-В обновленном README файле добавлен раздел "Тестирование", который описывает запуск тестов с помощью команды `python -m unittest tests.py`.
